@@ -13,16 +13,16 @@ public class GameController {
     }
 
     public void onMoveLeft(double step) {
-        player.move_horizontally(-Math.abs(step));
+        player.moveHorizontally(-Math.abs(step));
         syncView();
     }
 
     public void onMoveRight(double step) {
-        player.move_horizontally(Math.abs(step));
+        player.moveHorizontally(Math.abs(step));
         syncView();
     }
 
     public void syncView() {
-        view.renderStatus(player.get_x(), player.get_lives(), player.get_health(), player.get_starbits());
+        view.renderStatus(player.getX(), player.getLives(), player.getHealth(), player.getStarbits());
     }
 }
